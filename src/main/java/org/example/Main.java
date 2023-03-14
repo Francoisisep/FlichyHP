@@ -23,12 +23,13 @@ public class Main {
 
         }
         SortingHat house = new SortingHat();
+
         PasserNiveau(niveau);
         niveau += 1;
         Niveau1 niveau1 = new Niveau1();
         PasserNiveau(niveau);
         niveau += 1;
-        //Niveau2 niveau2 = new Niveau2();
+        Niveau2 niveau2 = new Niveau2();
         PasserNiveau(niveau);
         niveau += 1;
         //Niveau3 niveau3 = new Niveau3();
