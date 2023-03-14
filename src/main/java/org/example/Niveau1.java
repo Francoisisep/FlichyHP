@@ -28,6 +28,5 @@ public class Niveau1 {
 
         }
     */
-        End_Level fin = new End_Level();
     }
 }
