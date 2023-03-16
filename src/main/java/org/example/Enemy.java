@@ -42,7 +42,7 @@ public class Enemy extends AbstractEnemy {
     }
 }
     public void fight(double LivePoints,int Percentage,double LivePointsWizard, String NameWizard, int PercentageWizard, String EnemyName, String HouseWizard) {
-        while (LivePoints > 0 || LivePointsWizard > 0) {
+        while (LivePoints > 0 && LivePointsWizard > 0) {
             LivePoints = attack(NameWizard, "Enemy", PercentageWizard);
             if (LivePoints > 0) {
                 LivePointsWizard = attack(EnemyName, HouseWizard, Percentage);

@@ -7,6 +7,8 @@ public class Niveau1 {
         System.out.println("Vous êtes arrivé au niveau 1");
         System.out.println("Vous devez sauver un camarade de votre maison dans les toilettes du donjon. \n" +
                 "Vous affrontez le Troll utiliser Wingardium Leviosa pour faire tomber des objets sur la tête du troll");
+
+        Enemy enemy = new Enemy("Troll","FF",10,50,"Serdaigle");
         /*
         while (Point_de_vie_Troll = 0){
 
