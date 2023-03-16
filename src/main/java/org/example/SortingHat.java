@@ -18,7 +18,7 @@ public class SortingHat {
         rand = random * range  = random * 4 */
         int rand = (int) (Math.random() * 4);
         String[] tab = {"Poufsouffle", "Serpentard", "Gryffondor", "Serdaigle"};
-        String maison = tab[rand];
+        maison = tab[rand];
         System.out.println("Bravo votre maison est " + maison + ". Voici vos avantages:");
         /*donner les caractériques de la maison choisie (swtich) dans cette classe ou celle de House? */
         House maison1 = new House(maison);
@@ -26,7 +26,7 @@ public class SortingHat {
         //  System.out.println(tab[rand]);
 
     }
-
+private String maison;
 
 
 }
