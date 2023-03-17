@@ -7,20 +7,27 @@ public class Wizard extends Character{
    Scanner scanner = new Scanner(System.in);
     private String pet;
     private String wand;
-    private String house;
+    private String HouseWizard;
     //private int weaponDamage;
     private int Level;
 
+    private String Core;
     private double LivePointsWizard;
+    private String NameWizard;
+    public double DamageWizard;
+
     /*
     List<Potion> potions;
     List<Spell> knownSpells;
 */
     //Constructeur
-    public Wizard(String name){
+    public Wizard(String NameWizard){
+        this.NameWizard = NameWizard;
         Wand wand = new Wand();
-        LivePointsWizard = 10; //LifePoints = 100
+        this.Core = wand.getCore(); //Je récupère la composition de la baguette pour le niveau 7
+        this.LivePointsWizard = 10;
         this.Level=1;
+
         /*
         this.potions = new ArrayList<>();
         this.knownSpells = new ArrayList<>();
@@ -40,7 +47,9 @@ public class Wizard extends Character{
 
         }
         SortingHat house = new SortingHat();
-
+        this.HouseWizard = house.getHouseWizard();
+        System.out.println("TTTTTTTTEEEEEESSSSSSTTTTT"+ this.HouseWizard);
+/*
         PasserNiveau(Level);
         this.Level += 1;
         Niveau1 niveau1 = new Niveau1();
@@ -49,6 +58,8 @@ public class Wizard extends Character{
         Niveau2 niveau2 = new Niveau2();
         PasserNiveau(Level);
         this.Level += 1;
+
+ */
         /*
         //Niveau3 niveau3 = new Niveau3();
         PasserNiveau(niveau);
@@ -64,6 +75,24 @@ public class Wizard extends Character{
     }
 
     public int getLevel(){return Level;}
+    public int setLevel(int Level){
+        this.Level = Level;
+        return Level;
+    }
+    public double getLivePointsWizard(){return LivePointsWizard;}
+    public double setLivePointsWizard(double LivePointsWizard){
+        this.LivePointsWizard = LivePointsWizard;
+        return LivePointsWizard;
+    }
+    public String getNameWizard(){return NameWizard;}
+    public String getCore(){return Core;}
+    public String getHouseWizard(){return HouseWizard;}
+    public double getDamageWizard(){return DamageWizard;}
+    public double setDamageWizard(double DamageWizard){
+        this.DamageWizard = DamageWizard;
+        return DamageWizard;
+    }
+
 /*
     public List<Potion> getPotion(){return potions;}
 
@@ -74,10 +103,7 @@ public class Wizard extends Character{
     public int getNumberSpell(){return knownSpells.size();}
     */
 
-    public int setLevel(int Level){
-        this.Level = Level;
-        return Level;
-    }
+
 
     public int setLifePoints;
 
@@ -107,9 +133,11 @@ public class Wizard extends Character{
     }
 */
    // public Character.attack(Enemy enemy);
-    public static void PasserNiveau(int niveau) {
+    public void PasserNiveau(int niveau) {
         System.out.println("Vous avez un cours de sortilège");
         // Spell sort = new  Spell(niveau); // a cause de la abstract class AbstractSpell
 
     }
+
+
 }

@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Tu es un sorcier, quel est ton nom ? \n Hagrid");
-        String Nom = scanner.nextLine();
-        Wizard wizard = new Wizard(Nom);
+        Start start = new Start();
+
+
 
 
 
