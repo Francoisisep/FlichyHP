@@ -9,7 +9,7 @@ public class House  {
 
         switch (maison){
             case "Gryffondor":
-                System.out.println("Vous êtes plus résistants aux dégâts que les autres maisons.");
+                System.out.println("Vous êtes plus résistants aux dégâts que dans les autres maisons.");
                 PercentageWizard = 40;
                 DamageWizard = 0.5;
                 break;
@@ -24,7 +24,7 @@ public class House  {
                 DamageWizard = 0.5;
                 break;
             case "Serdaigle":
-                System.out.println("Vos sort sont plus précis.");
+                System.out.println("Vos sorts sont plus précis.");
                 PercentageWizard = 50;
                 DamageWizard = 0.5;
                 break;

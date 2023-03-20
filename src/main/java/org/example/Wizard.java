@@ -33,17 +33,17 @@ public class Wizard extends Character{
         this.potions = new ArrayList<>();
         this.knownSpells = new ArrayList<>();
         */
-        System.out.println("À Poudlard vous êtes autorisé d'avoir un animale de compagnie.\n Voulez-vous avoir un animal de compagnie ? soit oui soit non");
+        System.out.println("À Poudlard vous êtes autorisés à avoir un animal de compagnie.\n Voulez-vous avoir un animal de compagnie ? soit oui soit non");
         String réponse = scanner.nextLine();
         switch (réponse) {
             case "oui":
                 System.out.println("Vous avez le choix entre: OWL,RAT,CAT,TOAD. Vous devez en choisir 1");
                 /* il manque le enum */
                 String animal = scanner.nextLine(); // demander l'annimal
-                System.out.println("Parfait Vous pouvez à Poudlard.");
+                System.out.println("Parfait Vous pouvez aller à Poudlard.");
                 break;
             default:
-                System.out.println("Parfait Vous pouvez à Poudlard.");
+                System.out.println("Parfait Vous pouvez aller à Poudlard.");
                 break;
 
         }
@@ -56,25 +56,14 @@ public class Wizard extends Character{
     }
 
     public int getLevel(){return Level;}
-    public int setLevel(int Level){
-        this.Level = Level;
-        return Level;
-    }
+    public int setLevel(int Level){ this.Level = Level; return Level; }
     public double getLivePointsWizard(){return LivePointsWizard;}
-    public double setLivePointsWizard(double LivePointsWizard){
-        this.LivePointsWizard = LivePointsWizard;
-        return LivePointsWizard;
-    }
-
-
+    public double setLivePointsWizard(double LivePointsWizard){ this.LivePointsWizard = LivePointsWizard; return LivePointsWizard; }
     public String getNameWizard(){return NameWizard;}
     public String getCore(){return Core;}
     public String getHouseWizard(){return HouseWizard;}
     public double getDamageWizard(){return DamageWizard;}
-    public double setDamageWizard(double DamageWizard){
-        this.DamageWizard = DamageWizard;
-        return DamageWizard;
-    }
+    public double setDamageWizard(double DamageWizard){ this.DamageWizard = DamageWizard; return DamageWizard;}
     public int getPercentageWizard(){return PercentageWizard;}
 
 
