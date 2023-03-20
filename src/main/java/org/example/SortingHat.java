@@ -3,6 +3,7 @@ package org.example;
 import java.lang.invoke.LambdaConversionException;
 
 public class SortingHat {
+
   /*  public String house;
     public String getHouse(){
         return house;
@@ -21,7 +22,7 @@ public class SortingHat {
         HouseWizard = tab[rand];
         System.out.println("Bravo votre maison est " + HouseWizard + ". Voici vos avantages:");
         /*donner les caractériques de la maison choisie (swtich) dans cette classe ou celle de House? */
-        House maison1 = new House(HouseWizard);
+
         //void maison(){
         //  System.out.println(tab[rand]);
 

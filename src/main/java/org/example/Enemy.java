@@ -1,61 +1,100 @@
 package org.example;
+
+import java.util.Scanner;
+
 public class Enemy extends AbstractEnemy {
+    double LivePointsWizard1;
     private double LivePoints;
     private int Percentage;
-    public Enemy(String EnemyName, String NameWizard, double LivePointsWizard, int PercentageWizard, String HouseWizard) {
+    public Enemy(String EnemyName, String NameWizard, double LivePointsWizard, int PercentageWizard, String HouseWizard,double DamageWizard) {
         switch (EnemyName) {
             case "Troll":
                 this.LivePoints = 2;
                 this.Percentage = 10;
-                fight(LivePoints,Percentage,LivePointsWizard, NameWizard,PercentageWizard,EnemyName,HouseWizard);
+                fight(LivePoints,Percentage,LivePointsWizard, NameWizard,PercentageWizard,EnemyName,HouseWizard,DamageWizard);
                 break;
             case "Basilic":
                 this.LivePoints = 3;
                 this.Percentage = 20;
-                fight(LivePoints,Percentage,LivePointsWizard, NameWizard,PercentageWizard,EnemyName,HouseWizard);
+                fight(LivePoints,Percentage,LivePointsWizard, NameWizard,PercentageWizard,EnemyName,HouseWizard,DamageWizard);
                 break;
             case "Dementor":
                 this.LivePoints = 3;
                 this.Percentage = 40;
-                fight(LivePoints,Percentage,LivePointsWizard, NameWizard,PercentageWizard,EnemyName,HouseWizard);
+                fight(LivePoints,Percentage,LivePointsWizard, NameWizard,PercentageWizard,EnemyName,HouseWizard,DamageWizard);
                 break;
             case "Portkey":
                 this.LivePoints = 1;
                 this.Percentage = 50;
-                fight(LivePoints,Percentage,LivePointsWizard, NameWizard,PercentageWizard,EnemyName,HouseWizard);
+                fight(LivePoints,Percentage,LivePointsWizard, NameWizard,PercentageWizard,EnemyName,HouseWizard,DamageWizard);
                 break;
             case "Ombrage":
                 this.LivePoints = 10;
-                this.Percentage = 45;
-                fight(LivePoints,Percentage,LivePointsWizard, NameWizard,PercentageWizard,EnemyName,HouseWizard);
+                this.Percentage = 55;
+                fight(LivePoints,Percentage,LivePointsWizard, NameWizard,PercentageWizard,EnemyName,HouseWizard,DamageWizard);
                 break;
             case "DeathEaters":
-                this.LivePoints = 8;
-                this.Percentage = 40;
-                fight(LivePoints,Percentage,LivePointsWizard, NameWizard,PercentageWizard,EnemyName,HouseWizard);
+                this.LivePoints = 12;
+                this.Percentage = 60;
+                fight(LivePoints,Percentage,LivePointsWizard, NameWizard,PercentageWizard,EnemyName,HouseWizard,DamageWizard);
                 break;
             case "Lestrange":
                 this.LivePoints = 1;
-                this.Percentage = 55;
-                fight(LivePoints,Percentage,LivePointsWizard, NameWizard,PercentageWizard,EnemyName,HouseWizard);
+                this.Percentage = 65;
+                fight(LivePoints,Percentage,LivePointsWizard, NameWizard,PercentageWizard,EnemyName,HouseWizard,DamageWizard);
                 break;
     }
 }
-    public void fight(double LivePoints,int Percentage,double LivePointsWizard, String NameWizard, int PercentageWizard, String EnemyName, String HouseWizard) {
-        double DamageWizard = 0.5;
-        while (this.LivePoints > 0 && LivePointsWizard > 0) {
-            this.LivePoints = attack( PercentageWizard,Damagepoint(NameWizard, "Enemy",DamageWizard)); //A récuperer grace à la classe Wizard
-            System.out.println("dd" + this.LivePoints);
-            if (this.LivePoints > 0) {
-                LivePointsWizard = attack( Percentage,Damagepoint(EnemyName, HouseWizard,DamageWizard));
-                System.out.println("ss"+ LivePointsWizard);
+    public void fight(double LivePoints,int Percentage,double LivePointsWizard, String NameWizard, int PercentageWizard, String EnemyName, String HouseWizard,double DamageWizard) {
+        while (LivePoints > 0 && LivePointsWizard > 0) {
+            double intermédiaireLivePoints = LivePoints;
+            LivePoints =LivePoints - attack( PercentageWizard,Damagepoint(NameWizard, "Enemy",DamageWizard)); //A récuperer grace à la classe Wizard
+            if(LivePoints-intermédiaireLivePoints < 0) {
+                System.out.println("Vous avez atteint votre cible");
+                System.out.println("point de vie de l'ennemie " + LivePoints );
+                System.out.println("Point de vie du sorcier "+ LivePointsWizard);
+            }
+            if (LivePoints > 0) {
+                double intermédiaireLivePointsWizard = LivePointsWizard;
+                LivePointsWizard =LivePointsWizard - attack( Percentage,Damagepoint(EnemyName, HouseWizard,DamageWizard));
+                if (LivePointsWizard-intermédiaireLivePointsWizard <0) {
+                    Context(EnemyName);
+                    System.out.println("point de vie de l'ennemie " + LivePoints );
+                    System.out.println("Point de vie du sorcier " + LivePointsWizard);
+                }
             }
             else {
                 System.out.println("Vous avez réussit à vous débarrasez de "+ EnemyName);
+                LivePointsWizard1 = LivePointsWizard;
+                System.out.println(LivePointsWizard1);
+            }
+            if (LivePointsWizard <= 0){
+                System.out.println("Vous avez perdu");
             }
         }
-        if (LivePointsWizard <= 0){
-            System.out.println("Vous avez perdu");
-        }
+
     }
+public void Context(String EnemyName){
+    switch (EnemyName){
+        case "Troll":
+            System.out.println("Le Troll vous lance des objets vous perdez de la vie");
+            break;
+        case "Basilic":
+            System.out.println("Le Basilic vous donne un coup de queue vous perdez de la vie");
+            break;
+        case "Dementor":
+            System.out.println("Le Détraqueur aspire votre âme vous perdez de la vie");
+            break;
+        default:
+            EnemySort();
+            break;
+    }
+}
+    public void EnemySort (){ // donne le sort que lance l'adversaire du joueur
+        int rand = (int) (Math.random() * 3);
+        String[] tab = {"Avada Kedavra", "Impero", "Endoloris"};
+        String impardonnable = tab[rand];
+        System.out.println("Vous avec reçu le sortilège " + impardonnable + " Vous perdez de la vie");
+    }
+    public double getLivePointsWizard(){return LivePointsWizard1;}
 }

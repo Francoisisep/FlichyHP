@@ -14,7 +14,8 @@ public class Wizard extends Character{
     private String Core;
     private double LivePointsWizard;
     private String NameWizard;
-    public double DamageWizard;
+    private double DamageWizard;
+    private int PercentageWizard;
 
     /*
     List<Potion> potions;
@@ -48,30 +49,10 @@ public class Wizard extends Character{
         }
         SortingHat house = new SortingHat();
         this.HouseWizard = house.getHouseWizard();
-        System.out.println("TTTTTTTTEEEEEESSSSSSTTTTT"+ this.HouseWizard);
-/*
-        PasserNiveau(Level);
-        this.Level += 1;
-        Niveau1 niveau1 = new Niveau1();
-        PasserNiveau(Level);
-        this.Level += 1;
-        Niveau2 niveau2 = new Niveau2();
-        PasserNiveau(Level);
-        this.Level += 1;
+        House maison = new House(HouseWizard);
+        this.DamageWizard = maison.getDamageWizard();
+       this.PercentageWizard = maison.getPercentageWizard();
 
- */
-        /*
-        //Niveau3 niveau3 = new Niveau3();
-        PasserNiveau(niveau);
-        niveau += 1;
-        //Niveau4 niveau4 = new Niveau4();
-        PasserNiveau(niveau);
-        niveau += 1;
-        //Niveau5 niveau5 = new Niveau5();
-        PasserNiveau(niveau);
-        //Niveau6 niveau6 = new Niveau6();
-        //Niveau7 niveau7 = new Niveau7();
-*/
     }
 
     public int getLevel(){return Level;}
@@ -84,6 +65,8 @@ public class Wizard extends Character{
         this.LivePointsWizard = LivePointsWizard;
         return LivePointsWizard;
     }
+
+
     public String getNameWizard(){return NameWizard;}
     public String getCore(){return Core;}
     public String getHouseWizard(){return HouseWizard;}
@@ -92,6 +75,8 @@ public class Wizard extends Character{
         this.DamageWizard = DamageWizard;
         return DamageWizard;
     }
+    public int getPercentageWizard(){return PercentageWizard;}
+
 
 /*
     public List<Potion> getPotion(){return potions;}
@@ -133,11 +118,7 @@ public class Wizard extends Character{
     }
 */
    // public Character.attack(Enemy enemy);
-    public void PasserNiveau(int niveau) {
-        System.out.println("Vous avez un cours de sortilège");
-        // Spell sort = new  Spell(niveau); // a cause de la abstract class AbstractSpell
 
-    }
 
 
 }
