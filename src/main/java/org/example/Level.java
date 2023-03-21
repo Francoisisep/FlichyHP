@@ -18,8 +18,7 @@ public class Level {
                 System.out.println("Vous êtes arrivés au niveau 2\n" +
                         "Vous devez sauver un de vos camarades de votre maison qui est enfermé dans la chambre des secrets.\n" +
                         "Vous êtes dans la chambre des secrets, vous affrontez le Basilic.\n" +
-                        "Si Gryffondor \"vous pouvez utiliser l'épée de Godric Gryffondor.\"\n" +
-                        "Sinon  vous devez utiliser les crochets pour détruire le journal de Jedusor.");
+                        "Vous devez utiliser les crochets pour détruire le journal de Jedusor.");
                 EnemyName = "Basilic";
                 break;
             case 3:
