@@ -1,9 +1,14 @@
 package Player_Enemy;
 
 import Spell_Potions.ForbiddenSpell;
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 
 public class Enemy extends AbstractEnemy {
-    double LivePointsWizard1;
+    double LivePointsWizard;
     private double LivePoints;
     private int Percentage;
     public Enemy(String EnemyName, String NameWizard, double LivePointsWizard, int PercentageWizard, String HouseWizard,double DamageWizard) {
@@ -60,7 +65,9 @@ public class Enemy extends AbstractEnemy {
                     Context(EnemyName);
                     System.out.println("points de vie de l'ennemi: " + LivePoints + " Points de vie du sorcier: "+ LivePointsWizard);}
             }
-            else {System.out.println("Vous avez réussi à vous débarraser du "+ EnemyName + "."); LivePointsWizard1 = LivePointsWizard;}
+            else {System.out.println("Vous avez réussi à vous débarraser du "+ EnemyName + ".");
+                this.LivePointsWizard = LivePointsWizard;
+                }
             if (LivePointsWizard <= 0){ System.out.println("Vous avez perdu."); }
         }
     }
@@ -85,5 +92,5 @@ public void Context(String EnemyName){
         ForbiddenSpell forbiddenSpell= new ForbiddenSpell(rand);
         String impardonnable = forbiddenSpell.getForbiddenSpell();
         System.out.println("Vous avec reçu le sortilège " + impardonnable + ", vous perdez de la vie."); }
-    public double getLivePointsWizard(){return LivePointsWizard1;}
+ //   public double getLivePointsWizard(){return LivePointsWizard1;}
 }

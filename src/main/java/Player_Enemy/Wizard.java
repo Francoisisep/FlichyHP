@@ -4,9 +4,13 @@ import Player_Enemy.House_Wand_Pet.Pet;
 import Player_Enemy.House_Wand_Pet.SortingHat;
 import Player_Enemy.House_Wand_Pet.Wand;
 import Spell_Potions.Spell;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+@Setter
+@Getter
 public class Wizard extends Character {
    Scanner scanner = new Scanner(System.in);
     private String HouseWizard;
@@ -59,6 +63,7 @@ public class Wizard extends Character {
        this.PercentageWizard = maison.getPercentageWizard();
         Spell spell = new Spell();
     }
+    /*
     public int getLevel(){return Level;}
     public int setLevel(int Level){ this.Level = Level; return Level; }
     public double getLivePointsWizard(){return LivePointsWizard;}
@@ -69,4 +74,6 @@ public class Wizard extends Character {
     public double getDamageWizard(){return DamageWizard;}
     public double setDamageWizard(double DamageWizard){ this.DamageWizard = DamageWizard; return DamageWizard;}
     public int getPercentageWizard(){return PercentageWizard;}
+
+     */
 }

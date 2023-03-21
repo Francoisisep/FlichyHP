@@ -1,11 +1,17 @@
 package Player_Enemy;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class Level {
     private String EnemyName;
     private String Result;
-    public Level(int Level){
-        switch (Level){
+    public  Level(int Level) {
+        switch (Level) {
             case 1:
-                System.out.println("Vous êtes arrivés au niveau 1.\n"+
+                System.out.println("Vous êtes arrivés au niveau 1.\n" +
                         "Vous devez sauver un camarade de votre maison dans les toilettes du donjon. \n" +
                         "Vous affrontez le Troll. Utilisez Wingardium Leviosa pour faire tomber des objets sur la tête du troll.");
 
@@ -51,7 +57,5 @@ public class Level {
                 break;
         }
     }
-    public String getEnemyName() {
-        return EnemyName;
-    }
+   // public String getEnemyName() {return EnemyName;}
 }

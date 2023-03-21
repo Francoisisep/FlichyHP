@@ -1,8 +1,12 @@
 package Spell_Potions;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.List;
-
+@Setter
+@Getter
 public class ForbiddenSpell extends AbstractSpell {
     private String forbiddenSpell;
     public ForbiddenSpell(int index) {
@@ -16,5 +20,5 @@ public class ForbiddenSpell extends AbstractSpell {
 
 
     }
-    public String getForbiddenSpell(){return forbiddenSpell ;}
+    //public String getForbiddenSpell(){return forbiddenSpell ;}
 }

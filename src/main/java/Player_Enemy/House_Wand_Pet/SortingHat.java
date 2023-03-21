@@ -1,9 +1,13 @@
 package Player_Enemy.House_Wand_Pet;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.lang.invoke.LambdaConversionException;
-
+@Setter
+@Getter
 public class SortingHat {
-
+    private String HouseWizard;
   /*  public String house;
     public String getHouse(){
         return house;
@@ -25,8 +29,8 @@ public class SortingHat {
         //void maison(){
         //  System.out.println(tab[rand]);
     }
-private String HouseWizard;
-    public String getHouseWizard(){return HouseWizard;}
+
+   // public String getHouseWizard(){return HouseWizard;}
 
 
 

@@ -1,5 +1,13 @@
 package Player_Enemy.House_Wand_Pet;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class Wand {
+    private int size;
+    private String Core;
     public Wand ()
     {
         System.out.println("Vous devez avoir une baguette, allez chez Olivender pour en avoir une." );
@@ -10,7 +18,6 @@ public class Wand {
         Core = ta[i];
         System.out.println("Félicitations, votre baguette mesure " + size + " cm et elle contient du "+ Core+".");
     }
-    private int size;
-    private String Core;
-    public String getCore(){return Core;}
+
+    //public String getCore(){return Core;}
 }
