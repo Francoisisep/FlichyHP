@@ -3,7 +3,6 @@ import Player_Enemy.Boss;
 import Player_Enemy.Enemy;
 import Player_Enemy.Level;
 import Player_Enemy.Wizard;
-
 import java.util.Scanner;
 public class Start {
     Scanner scanner = new Scanner(System.in);
@@ -11,13 +10,6 @@ public class Start {
     String Nom = scanner.nextLine();
     Wizard player = new Wizard(Nom);
     int Level = player.getLevel();
-    String HouseWizard = player.getHouseWizard();
-
-   /* double LivePointsWizard = player.getLivePointsWizard();
-    String NameWizard = player.getNameWizard();
-    String Core = player.getCore();
-
-    */
     public Start() {
         Player_Enemy.Level level1 = new Level(Level);
         Enemy enemy = new Enemy(level1.getEnemyName(), player.getNameWizard(), player.getLivePointsWizard(), player.getPercentageWizard(), player.getHouseWizard(), player.getDamageWizard());

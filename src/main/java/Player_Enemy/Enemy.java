@@ -1,5 +1,7 @@
 package Player_Enemy;
 
+import Spell_Potions.ForbiddenSpell;
+
 public class Enemy extends AbstractEnemy {
     double LivePointsWizard1;
     private double LivePoints;
@@ -80,8 +82,8 @@ public void Context(String EnemyName){
 }
     public void EnemySort (){ // donne le sort que lance l'adversaire du joueur
         int rand = (int) (Math.random() * 3);
-        String[] tab = {"Avada Kedavra", "Impero", "Endoloris"};
-        String impardonnable = tab[rand];
+        ForbiddenSpell forbiddenSpell= new ForbiddenSpell(rand);
+        String impardonnable = forbiddenSpell.getForbiddenSpell();
         System.out.println("Vous avec reçu le sortilège " + impardonnable + ", vous perdez de la vie."); }
     public double getLivePointsWizard(){return LivePointsWizard1;}
 }

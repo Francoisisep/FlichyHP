@@ -1,5 +1,4 @@
 package Player_Enemy;
-
 public abstract class Character {
     public double attack( int Percentage,double DamagePoint){
         if (PercentageSpell(Percentage)== true){; // chance de réussite
@@ -8,7 +7,6 @@ public abstract class Character {
         else
             return 0;
     }
-
     public boolean PercentageSpell(int Percentage){
         int Number = (int) (Math.random() * 101);
         if (Number < Percentage){
@@ -80,5 +78,4 @@ public abstract class Character {
                 return DamageWizard;
         }
     }
-
 }

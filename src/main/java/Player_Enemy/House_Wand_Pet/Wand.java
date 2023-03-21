@@ -1,7 +1,4 @@
 package Player_Enemy.House_Wand_Pet;
-
-import java.util.Scanner;
-
 public class Wand {
     public Wand ()
     {

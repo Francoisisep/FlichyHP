@@ -1,7 +1,4 @@
 package Player_Enemy;
-
-import java.util.Scanner;
-
 public class Level {
     private String EnemyName;
     private String Result;
@@ -52,11 +49,8 @@ public class Level {
                         "Vous devez mettre hors d'état de nuire Voldemort et Bellatrix Lestrange. ");
                 EnemyName = "Lestrange";
                 break;
-
         }
-
     }
-
     public String getEnemyName() {
         return EnemyName;
     }

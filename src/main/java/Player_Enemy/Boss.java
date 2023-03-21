@@ -1,9 +1,10 @@
 package Player_Enemy;
 
+import Spell_Potions.ForbiddenSpell;
+
 public class Boss extends AbstractEnemy{
     private double LivePoints;
     private String wand = "PHOENIX_FEATHER";
-
     public Boss(double LivePointsWizard, String NameWizard, int PercentageWizard, String HouseWizard,double DamageWizard,String Core){
         if (Core == wand){
             LivePointsWizard +=1;
@@ -23,8 +24,8 @@ public class Boss extends AbstractEnemy{
                 LivePointsWizard = LivePointsWizard - attack(70,Damagepoint("Voldemort", HouseWizard,DamageWizard));
                 if (LivePointsWizard-intermédiaireLivePointsWizard <0) {
                     int rand = (int) (Math.random() * 3);
-                    String[] tab = {"Avada Kedavra", "Impero", "Endoloris"};
-                    String impardonnable = tab[rand];
+                    ForbiddenSpell forbiddenSpell= new ForbiddenSpell(rand);
+                    String impardonnable = forbiddenSpell.getForbiddenSpell();
                     System.out.println("Vous avec reçu le sortilège " + impardonnable + ", vous perdez de la vie");
                     System.out.println("Points de vie de l'ennemi: " + LivePoints);
                     System.out.println("Points de vie du sorcier: " + LivePointsWizard);
@@ -38,6 +39,4 @@ public class Boss extends AbstractEnemy{
             }
         }
     }
-
 }
-
