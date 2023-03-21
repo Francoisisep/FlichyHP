@@ -70,17 +70,17 @@ public class Start {
                 "Qu'est-ce que vous voulez améliorer?");
         String Result = scanner.nextLine();
         switch (Result){
-            case "deg":
+            case "potion":
                 switch (HouseWizard){
                     case "Poufsouffle":
-                        player.setDamageWizard(DamageWizard + Level );
+                        player.setLivePointsWizard(LivePointsWizard + Level);
                         break;
                     default:
-                        player.setDamageWizard(DamageWizard + Level/2 );
+                        player.setLivePointsWizard(LivePointsWizard + Level/2 );
                         break; }
                 break;
             default:
-                player.setLivePointsWizard(LivePointsWizard + Level);
+                player.setDamageWizard(DamageWizard + Level );
                 break;
         }
         System.out.println("Points de vie: " + player.getLivePointsWizard() + " Dégats de vos sortilèges: " + player.getDamageWizard());

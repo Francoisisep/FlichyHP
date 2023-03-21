@@ -60,7 +60,7 @@ public class Enemy extends AbstractEnemy {
                     Context(EnemyName);
                     System.out.println("points de vie de l'ennemi: " + LivePoints + " Points de vie du sorcier: "+ LivePointsWizard);}
             }
-            else {System.out.println("Vous avez réussi à vous débarraser de "+ EnemyName + "."); LivePointsWizard1 = LivePointsWizard;}
+            else {System.out.println("Vous avez réussi à vous débarraser du "+ EnemyName + "."); LivePointsWizard1 = LivePointsWizard;}
             if (LivePointsWizard <= 0){ System.out.println("Vous avez perdu."); }
         }
     }
