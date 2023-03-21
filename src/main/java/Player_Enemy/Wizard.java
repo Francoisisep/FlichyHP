@@ -5,6 +5,7 @@ import Player_Enemy.House_Wand_Pet.SortingHat;
 import Player_Enemy.House_Wand_Pet.Wand;
 import Spell_Potions.Spell;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Wizard extends Character {
    Scanner scanner = new Scanner(System.in);
@@ -15,21 +16,28 @@ public class Wizard extends Character {
     private String NameWizard;
     private double DamageWizard;
     private int PercentageWizard;
-    /*
-    List<Potion> potions;
-    List<Spell> knownSpells;
-*/
     public Wizard(String NameWizard){
         this.NameWizard = NameWizard;
         Wand wand = new Wand();
         this.Core = wand.getCore(); //Je récupère la composition de la baguette pour le niveau 7
         this.LivePointsWizard = 10;
         this.Level=1;
-        /*
-        this.potions = new ArrayList<>();
-       */
         System.out.println("À Poudlard vous êtes autorisés à avoir un animal de compagnie.\n Voulez-vous avoir un animal de compagnie ? soit oui soit non");
         String réponse = scanner.nextLine();
+        /*
+        try {
+            String [] choix = {"oui","non"};
+            System.out.println("À Poudlard vous êtes autorisés à avoir un animal de compagnie.\n Voulez-vous avoir un animal de compagnie ? soit oui soit non");
+            String réponse = scanner.nextLine();
+        }
+        catch (Exception e){
+            System.out.println("La réponse est incorrecte. Recommencez");
+            String réponse = scanner.nextLine();
+        }
+        finally {
+            return réponse;
+        }
+         */
         switch (réponse) {
             case "oui":
                 Pet p1 = Pet.OWL;
@@ -61,35 +69,4 @@ public class Wizard extends Character {
     public double getDamageWizard(){return DamageWizard;}
     public double setDamageWizard(double DamageWizard){ this.DamageWizard = DamageWizard; return DamageWizard;}
     public int getPercentageWizard(){return PercentageWizard;}
-/*
-    public List<Potion> getPotion(){return potions;}
-    public int getNumberPotion(){return potions.size();}
-    public List<Spell> getSpell(){return knownSpells;}
-    public int getNumberSpell(){return knownSpells.size();}
-    */
-    /*
-    public List<Potion> addPotion(){
-        int addMana=30;
-        //Ajouter la potion à l'inventaire
-        this.potions.add(new Potion(addMana));
-        return potions;
-    }
-
-    public List<Spell> addSpell(){
-        int addLife=20;
-        //Ajouter la potion à l'inventaire
-        this.knownSpells.add(new Spell(addLife));
-        return this.knownSpells;
-    }
-
-    public List<Potion> consumePotion(){
-        setLifePoints(getLifePoints()+potions.get(0).getAddMana());
-        this.potions.remove(0);
-        return this.potions;
-    }
-*/
-   // public Character.attack(Enemy enemy);
-
-
-
 }
