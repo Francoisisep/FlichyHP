@@ -1,4 +1,4 @@
-package org.example;
+package Player_Enemy;
 
 import java.util.Scanner;
 

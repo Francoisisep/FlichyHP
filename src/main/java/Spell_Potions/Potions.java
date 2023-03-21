@@ -1,4 +1,4 @@
-package org.example;
+package Spell_Potions;
 
 import java.util.List;
 

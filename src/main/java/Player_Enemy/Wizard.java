@@ -1,8 +1,13 @@
-package org.example;
+package Player_Enemy;
+
+import Player_Enemy.House_Wand_Pet.House;
+import Player_Enemy.House_Wand_Pet.Pet;
+import Player_Enemy.House_Wand_Pet.SortingHat;
+import Player_Enemy.House_Wand_Pet.Wand;
 
 import java.util.Scanner;
 
-public class Wizard extends Character{
+public class Wizard extends Character {
 
    Scanner scanner = new Scanner(System.in);
     private String pet;
@@ -37,8 +42,11 @@ public class Wizard extends Character{
         String réponse = scanner.nextLine();
         switch (réponse) {
             case "oui":
-                System.out.println("Vous avez le choix entre: OWL,RAT,CAT,TOAD. Vous devez en choisir 1");
-                /* il manque le enum */
+                Pet p1 = Pet.OWL;
+                Pet p2 = Pet.CAT;
+                Pet p3 = Pet.TOAD;
+                Pet p4 = Pet.RAT;
+                System.out.println("Vous avez le choix entre: " + p1 + ", " + p2 + ", " + p3 + ", " + p4 +". Vous devez en choisir 1");
                 String animal = scanner.nextLine(); // demander l'annimal
                 System.out.println("Parfait Vous pouvez aller à Poudlard.");
                 break;
@@ -83,9 +91,7 @@ public class Wizard extends Character{
 
 
     //Fonctions inventaire
-
-    //Ajout de potions et de lembas à l'inventaire
-/*
+    /*
     public List<Potion> addPotion(){
         int addMana=30;
         //Ajouter la potion à l'inventaire

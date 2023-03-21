@@ -1,10 +1,14 @@
-package org.example;
+package Player_Enemy;
 
 public class Boss extends AbstractEnemy{
     private double LivePoints;
     private String wand = "PHOENIX_FEATHER";
 
-    public Boss(double LivePointsWizard, String NameWizard, int PercentageWizard, String HouseWizard,double DamageWizard){
+    public Boss(double LivePointsWizard, String NameWizard, int PercentageWizard, String HouseWizard,double DamageWizard,String Core){
+        if (Core == wand){
+            LivePointsWizard +=1;
+            System.out.println("Votre baguette et celle de Lord Voldemort sont jumelles vous voyez des fantômes qui vous conseillent + 1 points de vie");
+        }
         LivePoints = 1;
         while (LivePoints > 0 && LivePointsWizard > 0) {
             double intermédiaireLivePoints = LivePoints;
@@ -34,5 +38,6 @@ public class Boss extends AbstractEnemy{
             }
         }
     }
+
 }
 

@@ -1,4 +1,4 @@
-package org.example;
+package Spell_Potions;
 /*
 public class Spell extends AbstractSpell
 {

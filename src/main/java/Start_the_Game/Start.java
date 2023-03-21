@@ -1,4 +1,9 @@
-package org.example;
+package Start_the_Game;
+import Player_Enemy.Boss;
+import Player_Enemy.Enemy;
+import Player_Enemy.Level;
+import Player_Enemy.Wizard;
+
 import java.util.Scanner;
 public class Start {
     Scanner scanner = new Scanner(System.in);
@@ -14,7 +19,7 @@ public class Start {
 
     */
     public Start() {
-        Level level1 = new Level(Level);
+        Player_Enemy.Level level1 = new Level(Level);
         Enemy enemy = new Enemy(level1.getEnemyName(), player.getNameWizard(), player.getLivePointsWizard(), player.getPercentageWizard(), player.getHouseWizard(), player.getDamageWizard());
         this.LivePointsWizard = enemy.getLivePointsWizard();
         player.setLivePointsWizard(LivePointsWizard);
@@ -61,7 +66,8 @@ public class Start {
         Enemy enemy7 = new Enemy(level7.getEnemyName(), player.getNameWizard(), player.getLivePointsWizard(), player.getPercentageWizard(), player.getHouseWizard(), player.getDamageWizard());
         this.LivePointsWizard = enemy7.getLivePointsWizard();
         player.setLivePointsWizard(LivePointsWizard);
-        if(LivePointsWizard > 0){Boss enemy8 = new Boss(player.getLivePointsWizard(), player.getNameWizard(), player.getPercentageWizard(), player.getHouseWizard(), player.getDamageWizard());}
+        if(LivePointsWizard > 0){
+            Boss enemy8 = new Boss(player.getLivePointsWizard(), player.getNameWizard(), player.getPercentageWizard(), player.getHouseWizard(), player.getDamageWizard(),player.getCore());}
         }}}}}}
     }
     public void End_Levels(double LivePointsWizard ,double DamageWizard,int Level,String HouseWizard){

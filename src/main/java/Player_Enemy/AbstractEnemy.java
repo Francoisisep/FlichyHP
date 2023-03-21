@@ -1,6 +1,4 @@
-package org.example;
-
-import java.util.Scanner;
+package Player_Enemy;
 
 public abstract class AbstractEnemy extends Character {
 

@@ -1,4 +1,4 @@
-package org.example;
+package Player_Enemy;
 
 public abstract class Character {
     public double attack( int Percentage,double DamagePoint){
