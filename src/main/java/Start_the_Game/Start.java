@@ -84,9 +84,13 @@ public class Start {
         Scanner scanner = new Scanner(System.in);
         System.out.println(" Vous pouvez choisir d’augmenter vos points de vie (potion) ou les points de dégats de vos sortilèges (deg). \n" +
                 "Qu'est-ce que vous voulez améliorer?");
-        String Result = scanner.nextLine();
-        switch (Result){
-            case "potion":
+        //String Result = scanner.nextLine();
+        boolean ok = false;
+        while (!ok){
+            String Result = scanner.nextLine();
+            int result = Result.compareTo("potion");
+            int result1 = Result.compareTo("deg");
+            if (result == 0){
                 switch (HouseWizard){
                     case "Poufsouffle":
                         player.setLivePointsWizard(LivePointsWizard + 2*Level);
@@ -94,10 +98,14 @@ public class Start {
                     default:
                         player.setLivePointsWizard(LivePointsWizard + Level );
                         break; }
-                break;
-            default:
+                ok = true;
+            } else if (result1 == 0) {
                 player.setDamageWizard(DamageWizard + Level );
-                break;
+                ok = true;
+            }
+            else {
+                System.out.println("Vous n'avez pas bien répondu.");
+            }
         }
         System.out.println("Points de vie: " + player.getLivePointsWizard() + " Dégats de vos sortilèges: " + player.getDamageWizard());
     }
