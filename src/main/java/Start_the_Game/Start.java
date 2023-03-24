@@ -82,6 +82,7 @@ public class Start {
     }
     public void End_Levels(double LivePointsWizard ,double DamageWizard,int Level,String HouseWizard){
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Points de vie: " + player.getLivePointsWizard() + " Dégats de vos sortilèges: " + player.getDamageWizard());
         System.out.println(" Vous pouvez choisir d’augmenter vos points de vie (potion) ou les points de dégats de vos sortilèges (deg). \n" +
                 "Qu'est-ce que vous voulez améliorer?");
         //String Result = scanner.nextLine();

@@ -3,11 +3,13 @@ package Player_Enemy;
 import Spell_Potions.ForbiddenSpell;
 import lombok.Getter;
 import lombok.Setter;
+import java.util.Scanner;
 
 @Setter
 @Getter
 
 public class Enemy extends AbstractEnemy {
+    Scanner scanner = new Scanner(System.in);
     double LivePointsWizard;
     private double LivePoints;
     private int Percentage;
@@ -52,18 +54,22 @@ public class Enemy extends AbstractEnemy {
 }
     public void fight(double LivePoints,int Percentage,double LivePointsWizard, String NameWizard, int PercentageWizard, String EnemyName, String HouseWizard,double DamageWizard) {
         while (LivePoints > 0 && LivePointsWizard > 0) {
-            double intermédiaireLivePoints = LivePoints;
+           double intermédiaireLivePoints = LivePoints;
+            System.out.println("A vous de jouer !");
+            scanner.nextLine();
             LivePoints =LivePoints - attack( PercentageWizard,Damagepoint(NameWizard, "Enemy",DamageWizard)); //A récuperer grace à la classe Wizard
             if(LivePoints-intermédiaireLivePoints < 0) {
                 System.out.println("Vous avez atteint votre cible.");
-                System.out.println("points de vie de l'ennemi: " + LivePoints + " Points de vie du sorcier: "+ LivePointsWizard);
+            //    System.out.println("points de vie de l'ennemi: " + LivePoints + " Points de vie du sorcier: "+ LivePointsWizard);
             }
+            else {System.out.println("Vous avez raté votre sortilège.");}
             if (LivePoints > 0) {
-                double intermédiaireLivePointsWizard = LivePointsWizard;
+                 double intermédiaireLivePointsWizard = LivePointsWizard;
                 LivePointsWizard =LivePointsWizard - attack( Percentage,Damagepoint(EnemyName, HouseWizard,DamageWizard));
                 if (LivePointsWizard-intermédiaireLivePointsWizard <0) {
                     Context(EnemyName);
-                    System.out.println("points de vie de l'ennemi: " + LivePoints + " Points de vie du sorcier: "+ LivePointsWizard);}
+                    //System.out.println("points de vie de l'ennemi: " + LivePoints + " Points de vie du sorcier: "+ LivePointsWizard);
+                }
             }
             else {System.out.println("Vous avez réussi à vous débarraser du "+ EnemyName + ".");
                 this.LivePointsWizard = LivePointsWizard;
@@ -80,7 +86,7 @@ public void Context(String EnemyName){
             System.out.println("Le Basilic vous donne un coup de queue. Vous perdez de la vie.");
             break;
         case "Dementor":
-            System.out.println("Le Détraqueur aspire votre âme. Vous perdez de la vie.");
+            System.out.println("Le Détraqueur aspire votre âme. Vous perdez de la vie." );
             break;
         default:
             EnemySort();

@@ -1,8 +1,6 @@
 package Player_Enemy;
-
 import lombok.Getter;
 import lombok.Setter;
-
 @Setter
 @Getter
 public class Level {
@@ -14,7 +12,6 @@ public class Level {
                 System.out.println("Vous êtes arrivés au niveau 1.\n" +
                         "Vous devez sauver un camarade de votre maison dans les toilettes du donjon. \n" +
                         "Vous affrontez le Troll. Utilisez Wingardium Leviosa pour faire tomber des objets sur la tête du troll.");
-
                 EnemyName = "Troll";
                 break;
             case 2:
