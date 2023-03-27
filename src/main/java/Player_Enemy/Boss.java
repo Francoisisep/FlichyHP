@@ -35,7 +35,7 @@ public class Boss extends AbstractEnemy{
                 }
             }
             else {
-                System.out.println("Vous avez gagné, Vous avez tué Lord Voldemort. Vous êtes diplômés de l'école Poudlard");
+                System.out.println("Vous avez gagné, Vous avez tué Lord Voldemort. Vous êtes diplômés de l'école Poudlard.");
             }
         }
     }
