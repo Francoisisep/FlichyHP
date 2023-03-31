@@ -8,11 +8,7 @@ public class AbstractEnemyTest {
         AbstractEnemy enemy = new ConcreteEnemy();
         assertTrue(false);
     }
-
-    // Une classe concrète pour pouvoir instancier un ennemi
     private class ConcreteEnemy extends AbstractEnemy {
-
-
     }
 }
 

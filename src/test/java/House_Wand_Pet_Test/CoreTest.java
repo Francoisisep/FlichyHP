@@ -1,11 +1,7 @@
 package House_Wand_Pet_Test;
-
 import Player_Enemy.House_Wand_Pet.Core;
 import org.junit.Test;
-
-
 public class CoreTest {
-
     @Test
     public void testEnumValues() {
         // Vérifie que toutes les valeurs de l'énumération sont présentes
@@ -15,11 +11,8 @@ public class CoreTest {
         assertTrue(Core.DRAGON_VENTRICLE instanceof Core);
         assertTrue(Core.SOMBRAL_HORSEHAIR instanceof Core);
     }
-
     private void assertTrue(boolean b) {
-
     }
-
     @Test
     public void testEnumToString() {
         // Vérifie que la méthode toString() retourne le nom de l'énumération en minuscules
@@ -28,9 +21,7 @@ public class CoreTest {
         assertEquals("dragon_ventricle", Core.DRAGON_VENTRICLE.toString());
         assertEquals("sombral_horsehair", Core.SOMBRAL_HORSEHAIR.toString());
     }
-
     private void assertEquals(String sombralHorsehair, String toString) {
 
     }
-
 }

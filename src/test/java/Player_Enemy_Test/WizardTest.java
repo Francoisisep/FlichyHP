@@ -1,11 +1,8 @@
 package Player_Enemy_Test;
 import Player_Enemy.Wizard;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
-
 class WizardTest {
-
     @Test
     void testWizardCreation() {
         Wizard wizard = new Wizard("Harry");
