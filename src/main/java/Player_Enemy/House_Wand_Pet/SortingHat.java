@@ -8,13 +8,6 @@ import java.lang.invoke.LambdaConversionException;
 @Getter
 public class SortingHat {
     private String HouseWizard;
-  /*  public String house;
-    public String getHouse(){
-        return house;
-        public void setHouse( String newHouse){
-            this.house = newHouse;
-        }
-    }*/
     public SortingHat() {
         System.out.println("Vous êtes arrivés à Poudlard. Le chapeau magique va vous répartir dans une maison.");
         /* chiffre entre 0 et 3
@@ -26,13 +19,6 @@ public class SortingHat {
         System.out.println("Bravo, votre maison est " + HouseWizard + ". Voici vos avantages:");
         /*donner les caractériques de la maison choisie (swtich) dans cette classe ou celle de House? */
 
-        //void maison(){
-        //  System.out.println(tab[rand]);
+
     }
-
-   // public String getHouseWizard(){return HouseWizard;}
-
-
-
-
 }

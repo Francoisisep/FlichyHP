@@ -1,12 +1,12 @@
 package Player_Enemy.House_Wand_Pet;
-
-import javax.xml.crypto.dsig.spec.XSLTTransformParameterSpec;
-
+import lombok.Getter;
+import lombok.Setter;
+@Setter
+@Getter
 public class House  {
     private int PercentageWizard;
     private double DamageWizard;
     public House(String maison){
-
         switch (maison){
             case "Gryffondor":
                 System.out.println("Vous êtes plus résistants aux dégâts que dans les autres maisons.");
@@ -28,13 +28,7 @@ public class House  {
                 PercentageWizard = 50;
                 DamageWizard = 0.5;
                 break;
-
-
         }
     }
-    public double getDamageWizard(){return DamageWizard;}
-    public int getPercentageWizard(){return PercentageWizard;}
-
-
 }
 

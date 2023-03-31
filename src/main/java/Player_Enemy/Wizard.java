@@ -6,8 +6,6 @@ import Player_Enemy.House_Wand_Pet.Wand;
 import Spell_Potions.Spell;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.InputMismatchException;
 import java.util.Scanner;
 @Setter
 @Getter
@@ -47,14 +45,13 @@ public class Wizard extends Character {
                     int result5 = animal.compareTo("TOAD");
                     int result6 = animal.compareTo("RAT");
                     if (result3 == 0 || result4 == 0 || result5 == 0 || result6 == 0){ ok1 = true;}
-                    else { System.out.println("Votre réponse est incorrect1.");}
+                    else { System.out.println("Votre réponse est incorrect.");}
                 }
                 ok = true;
             }
             else if (result2 == 0) { ok =true;}
             else { System.out.println("Votre réponse est incorrect.");}
         }
-
         System.out.println("Parfait Vous pouvez aller à Poudlard.");
         SortingHat house = new SortingHat();
         this.HouseWizard = house.getHouseWizard();
@@ -63,31 +60,15 @@ public class Wizard extends Character {
        this.PercentageWizard = maison.getPercentageWizard();
         Spell spell = new Spell();
     }
-    /*
-    public int getLevel(){return Level;}
-    public int setLevel(int Level){ this.Level = Level; return Level; }
-    public double getLivePointsWizard(){return LivePointsWizard;}
-    public double setLivePointsWizard(double LivePointsWizard){ this.LivePointsWizard = LivePointsWizard; return LivePointsWizard; }
-    public String getNameWizard(){return NameWizard;}
-    public String getCore(){return Core;}
-    public String getHouseWizard(){return HouseWizard;}
-    public double getDamageWizard(){return DamageWizard;}
-    public double setDamageWizard(double DamageWizard){ this.DamageWizard = DamageWizard; return DamageWizard;}
-    public int getPercentageWizard(){return PercentageWizard;}
-
-     */
     public String getString(String choice1,String choice2){
         boolean ok = false;
         while(!ok){
             String choice = scanner.next();
             if (choice == choice1){
-
                 ok = true;
-
             }
             else if (choice == choice2) {
                 ok =true;
-
             }
             else {
                 System.out.println("Votre réponse est incorrect.");

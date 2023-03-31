@@ -54,5 +54,4 @@ public class Level {
                 break;
         }
     }
-   // public String getEnemyName() {return EnemyName;}
 }

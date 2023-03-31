@@ -5,12 +5,9 @@ import Player_Enemy.Level;
 import Player_Enemy.Wizard;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.util.Scanner;
-
 @Setter
 @Getter
-
 public class Start {
     Scanner scanner = new Scanner(System.in);
     double LivePointsWizard;
@@ -77,8 +74,6 @@ public class Start {
         if(LivePointsWizard > 0){
             Boss enemy8 = new Boss(player.getLivePointsWizard(), player.getNameWizard(), player.getPercentageWizard(), player.getHouseWizard(), player.getDamageWizard(),player.getCore());}
         }}}}}}
-
-
     }
     public void End_Levels(double LivePointsWizard ,double DamageWizard,int Level,String HouseWizard){
         Scanner scanner = new Scanner(System.in);

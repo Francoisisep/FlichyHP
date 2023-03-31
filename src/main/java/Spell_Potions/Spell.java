@@ -1,10 +1,7 @@
 package Spell_Potions;
-
 import java.util.ArrayList;
 import java.util.List;
-
 public class Spell extends AbstractSpell{
-
     public Spell()
     {
         List<String> knownSpells;
