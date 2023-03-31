@@ -17,8 +17,5 @@ public class ForbiddenSpell extends AbstractSpell {
         ForbiddenSpells.add(1, "Impero");
         ForbiddenSpells.add(2, "Endoloris");
         forbiddenSpell = ForbiddenSpells.get(index);
-
-
     }
-    //public String getForbiddenSpell(){return forbiddenSpell ;}
 }

@@ -29,10 +29,4 @@ public class SortingHat {
         //void maison(){
         //  System.out.println(tab[rand]);
     }
-
-   // public String getHouseWizard(){return HouseWizard;}
-
-
-
-
 }

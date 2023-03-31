@@ -1,6 +1,10 @@
 package Player_Enemy.House_Wand_Pet;
 
-import javax.xml.crypto.dsig.spec.XSLTTransformParameterSpec;
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 
 public class House  {
     private int PercentageWizard;
@@ -32,9 +36,5 @@ public class House  {
 
         }
     }
-    public double getDamageWizard(){return DamageWizard;}
-    public int getPercentageWizard(){return PercentageWizard;}
-
-
 }
 

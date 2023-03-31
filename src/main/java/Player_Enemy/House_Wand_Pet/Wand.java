@@ -18,6 +18,4 @@ public class Wand {
         Core = ta[i];
         System.out.println("Félicitations, votre baguette mesure " + size + " cm et elle contient du "+ Core+".");
     }
-
-    //public String getCore(){return Core;}
 }
