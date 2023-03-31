@@ -1,8 +1,15 @@
 package Player_Enemy;
 
 import Spell_Potions.ForbiddenSpell;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.Scanner;
 
 public class Boss extends AbstractEnemy{
+    @Setter
+    @Getter
+    Scanner scanner = new Scanner(System.in);
     private double LivePoints;
     private String wand = "PHOENIX_FEATHER";
     public Boss(double LivePointsWizard, String NameWizard, int PercentageWizard, String HouseWizard,double DamageWizard,String Core){
@@ -21,6 +28,8 @@ public class Boss extends AbstractEnemy{
             }
             if (LivePoints > 0) {
                 double intermédiaireLivePointsWizard = LivePointsWizard;
+                System.out.println("A vous de jouer !");
+                scanner.nextLine();
                 LivePointsWizard = LivePointsWizard - attack(70,Damagepoint("Voldemort", HouseWizard,DamageWizard));
                 if (LivePointsWizard-intermédiaireLivePointsWizard <0) {
                     int rand = (int) (Math.random() * 3);
@@ -39,4 +48,7 @@ public class Boss extends AbstractEnemy{
             }
         }
     }
-}
+
+
+
+    }

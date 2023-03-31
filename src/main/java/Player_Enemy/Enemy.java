@@ -98,4 +98,6 @@ public void Context(String EnemyName){
         ForbiddenSpell forbiddenSpell= new ForbiddenSpell(rand);
         String impardonnable = forbiddenSpell.getForbiddenSpell();
         System.out.println("Vous avec reçu le sortilège " + impardonnable + ", vous perdez de la vie."); }
+
+
 }

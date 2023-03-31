@@ -1,9 +1,6 @@
 package Player_Enemy.House_Wand_Pet;
-
 import lombok.Getter;
 import lombok.Setter;
-
-import java.lang.invoke.LambdaConversionException;
 @Setter
 @Getter
 public class SortingHat {
@@ -18,7 +15,5 @@ public class SortingHat {
         HouseWizard = tab[rand];
         System.out.println("Bravo, votre maison est " + HouseWizard + ". Voici vos avantages:");
         /*donner les caractériques de la maison choisie (swtich) dans cette classe ou celle de House? */
-
-
     }
 }
