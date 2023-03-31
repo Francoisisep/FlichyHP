@@ -1,11 +1,8 @@
 package House_Wand_Pet_Test;
-
 import Player_Enemy.House_Wand_Pet.SortingHat;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
 public class SortingHatTest {
-
     @Test
     public void testHouseAssigned() {
         // Vérifie que le trieur assigne une maison valide
@@ -17,5 +14,4 @@ public class SortingHatTest {
                 house.equals("Gryffondor") ||
                 house.equals("Serdaigle"));
     }
-
 }

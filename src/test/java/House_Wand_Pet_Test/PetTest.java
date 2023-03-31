@@ -1,11 +1,8 @@
 package House_Wand_Pet_Test;
-
 import Player_Enemy.House_Wand_Pet.Pet;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
 public class PetTest {
-
     @Test
     public void testEnumValues() {
         // Vérifie que toutes les valeurs de l'énumération sont présentes
@@ -15,7 +12,6 @@ public class PetTest {
         assertTrue(Pet.CAT instanceof Pet);
         assertTrue(Pet.TOAD instanceof Pet);
     }
-
     @Test
     public void testEnumToString() {
         // Vérifie que la méthode toString() retourne le nom de l'énumération en minuscules
@@ -24,5 +20,4 @@ public class PetTest {
         assertEquals("cat", Pet.CAT.toString());
         assertEquals("toad", Pet.TOAD.toString());
     }
-
 }
