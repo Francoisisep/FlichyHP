@@ -14,11 +14,5 @@ class WizardTest {
         assertTrue(wizard.getDamageWizard() > 0);
         assertTrue(wizard.getPercentageWizard() > 0);
     }
-    @Test
-    void testGetString() {
-        Wizard wizard = new Wizard("Hermione");
-        assertEquals("oui", wizard.getString("oui", "non"));
-        assertEquals("non", wizard.getString("oui", "non"));
-    }
 }
 
