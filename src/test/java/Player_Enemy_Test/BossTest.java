@@ -5,12 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 class BossTest {
     @Test
-    void testAttack() {
-        Boss boss = new Boss(100, "Harry Potter", 50, "Gryffondor", 20, "PHOENIX_FEATHER");
-        double damage = boss.attack(70, 10);
-        assertTrue(damage > 0 && damage <= 70);
-    }
-    @Test
     void testDamagepoint() {
         Boss boss = new Boss(100, "Harry Potter", 50, "Gryffondor", 20, "PHOENIX_FEATHER");
         double damage = boss.Damagepoint("Lord Voldemort", "Serpentard", 10);

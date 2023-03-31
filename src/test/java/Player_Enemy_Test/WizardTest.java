@@ -17,8 +17,8 @@ class WizardTest {
     @Test
     void testGetString() {
         Wizard wizard = new Wizard("Hermione");
-        assertEquals("yes", wizard.getString("yes", "no"));
-        assertEquals("no", wizard.getString("yes", "no"));
+        assertEquals("oui", wizard.getString("oui", "non"));
+        assertEquals("non", wizard.getString("oui", "non"));
     }
 }
 
